@@ -7,9 +7,26 @@
 
 
 
-
-saludarGritanado = () =>{
-     return
+let obtenerNombreCompleto = (nombre, apellido) =>{
+     return ` ${nombre}  ${apellido} `
+ }
+ 
+ let gritar = (saludo) => {
+     return  `¡ ${saludo}  !`
 }
+ 
+let saludar = (nombre) => {
+          return ` Hola ${nombre}, un gusto conocerte`
+      }
 
-console.log()
+
+
+
+const saludarGritando = (nombre, apellido) => {
+     let nombreCompleto = obtenerNombreCompleto(nombre, apellido)
+     let saludo = saludar(nombreCompleto)
+     let grito = gritar(saludo)
+     return grito
+   }
+   
+   console.log(saludarGritando('Ada', 'Lovelace'))
